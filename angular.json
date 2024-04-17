@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "videosdk-angular-sample": {
+    "videosdk-ui-toolkit-angular-sample": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "videosdk-angular-sample:build:production"
+              "buildTarget": "videosdk-ui-toolkit-angular-sample:build:production"
             },
             "development": {
-              "buildTarget": "videosdk-angular-sample:build:development"
+              "buildTarget": "videosdk-ui-toolkit-angular-sample:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "videosdk-angular-sample:build"
+            "buildTarget": "videosdk-ui-toolkit-angular-sample:build"
           }
         },
         "test": {

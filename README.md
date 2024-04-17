@@ -10,21 +10,21 @@ This repo is an [Angular](https://angular.io/) app generated via the [Angular CL
 
 To get started, clone the repo:
 
-`$ git clone https://github.com/zoom/videosdk-angular-sample.git`
+`$ git clone https://github.com/zoom/videosdk-ui-toolkit-angular-sample.git`
 
 > To setup and run the app you will need the [Angular CLI](https://cli.angular.io).
 
 ## Setup
 
-1. Once cloned, navigate to the `videosdk-angular-sample` directory:
+1. Once cloned, navigate to the `videosdk-ui-toolkit-angular-sample` directory:
 
-   `$ cd videosdk-angular-sample`
+   `$ cd videosdk-ui-toolkit-angular-sample`
 
 1. Then install the dependencies:
 
    `$ npm install`
 
-1. Open the `videosdk-angular-sample` directory in your code editor.
+1. Open the `videosdk-ui-toolkit-angular-sample` directory in your code editor.
 
 1. Open the `src/app/app.component.ts` file, and enter values for the variables:
 
