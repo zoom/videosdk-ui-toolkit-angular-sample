@@ -36,10 +36,10 @@ export class AppComponent {
 
     this.inSession = true
     
-    this.httpClient.post(this.authEndpoint, JSON.stringify({
+    this.httpClient.post(this.authEndpoint, {
 	    sessionName:  this.config.sessionName,
       role: this.role,
-    })).toPromise().then((data: any) => {
+    }).subscribe((data: any) => {
       if(data.signature) {
         console.log(data.signature)
         this.config.videoSDKJWT = data.signature
@@ -47,9 +47,6 @@ export class AppComponent {
       } else {
         console.log(data)
       }
-    }).catch((error) => {
-      this.inSession = false
-      console.log(error)
     })
   }
 
