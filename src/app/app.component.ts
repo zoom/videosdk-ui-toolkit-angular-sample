@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, OnInit, Inject, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from '@angular/common';
 
@@ -7,9 +7,10 @@ import uitoolkit from "@zoom/videosdk-ui-toolkit";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  standalone: false
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   sessionContainer: any;
   authEndpoint = ''
@@ -29,7 +30,7 @@ export class AppComponent {
   };
   role = 1
 
-  constructor(public httpClient: HttpClient, @Inject(DOCUMENT) document: any) {
+  constructor(public httpClient: HttpClient, @Inject(DOCUMENT) document: any, private ngZone: NgZone) {
 
   }
 
@@ -57,9 +58,11 @@ export class AppComponent {
   }
 
   joinSession() {
-    uitoolkit.joinSession(this.sessionContainer, this.config)
+    this.ngZone.runOutsideAngular(() => {
+      uitoolkit.joinSession(this.sessionContainer, this.config)
 
-    uitoolkit.onSessionClosed(this.sessionClosed)
+      uitoolkit.onSessionClosed(this.sessionClosed)
+    })
   }
 
   sessionClosed = (() => {
