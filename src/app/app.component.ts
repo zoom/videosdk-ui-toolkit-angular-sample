@@ -2,7 +2,7 @@ import { Component, OnInit, Inject, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from '@angular/common';
 
-import uitoolkit from "@zoom/videosdk-ui-toolkit";
+import uitoolkit, { CustomizationOptions } from "@zoom/videosdk-ui-toolkit";
 
 @Component({
   selector: 'app-root',
@@ -15,17 +15,18 @@ export class AppComponent implements OnInit {
   sessionContainer: any;
   authEndpoint = ''
   inSession: boolean = false
-  config = {
+  config : CustomizationOptions = {
     videoSDKJWT: '',
     sessionName: 'test',
     userName: 'Angular',
     sessionPasscode: '123',
-    features: ['preview', 'video', 'audio', 'settings', 'users', 'chat', 'share'],
-    options: { init: {}, audio: {}, video: {}, share: {}},
-    virtualBackground: {
-       allowVirtualBackground: true,
-       allowVirtualBackgroundUpload: true,
-       virtualBackgrounds: ['https://images.unsplash.com/photo-1715490187538-30a365fa05bd?q=80&w=1945&auto=format&fit=crop']
+    featuresOptions: {
+      virtualBackground: {
+        enable: true,
+        virtualBackgrounds: [{
+          url: 'https://images.unsplash.com/photo-1715490187538-30a365fa05bd?q=80&w=1945&auto=format&fit=crop'
+        }]
+     }
     }
   };
   role = 1
