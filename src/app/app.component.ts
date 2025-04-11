@@ -61,14 +61,18 @@ export class AppComponent implements OnInit {
   joinSession() {
     this.ngZone.runOutsideAngular(() => {
       uitoolkit.joinSession(this.sessionContainer, this.config)
-
       uitoolkit.onSessionClosed(this.sessionClosed)
+      uitoolkit.onSessionDestroyed(this.sessionDestroyed)
     })
   }
 
   sessionClosed = (() => {
     console.log('session closed')
-    uitoolkit.closeSession(this.sessionContainer)
     this.inSession = false
+  })
+
+  sessionDestroyed = (() => {
+    console.log("session destroyed")
+    uitoolkit.destroy();
   })
 }
