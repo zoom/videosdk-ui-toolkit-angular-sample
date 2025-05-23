@@ -47,6 +47,7 @@ export class AppComponent implements OnInit {
     this.httpClient.post(this.authEndpoint, {
 	    sessionName:  this.config.sessionName,
       role: this.role,
+      videoWebRtcMode: 1,
     }).subscribe((data: any) => {
       if(data.signature) {
         console.log(data.signature)

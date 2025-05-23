@@ -1,6 +1,6 @@
 {
   "name": "videosdk-ui-toolkit-angular-sample",
-  "version": "2.1.10-2",
+  "version": "2.2.0-1",
   "author": "Zoom Video Communications, Inc.",
   "contributors": [
     {
@@ -24,7 +24,7 @@
     "@angular/platform-browser": "^19.0.1",
     "@angular/platform-browser-dynamic": "^19.0.1",
     "@angular/router": "^19.0.1",
-    "@zoom/videosdk-ui-toolkit": "2.1.10-2",
+    "@zoom/videosdk-ui-toolkit": "2.2.0-1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
