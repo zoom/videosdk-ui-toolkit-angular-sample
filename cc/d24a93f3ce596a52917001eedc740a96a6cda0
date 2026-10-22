@@ -1,0 +1,22 @@
+package.json
+  s_ad4809008827ef::t_2500a8573f465b 3,26
+  s_ad4809008827ef::t_7d5ac483e76668 35
+package-lock.json
+  s_ad4809008827ef::t_fb259e3f63e23e 3,9,19,28,3856-3858,3862,3893-3895,3903-3905,3909,9113-9115,9117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "ccd24a93f3ce596a52917001eedc740a96a6cda0",
+  "prompts": {},
+  "sessions": {
+    "s_ad4809008827ef": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16585-757b-7173-9bab-6ff78dc88c31",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Feiya Du <feiya.du@zoom.us>"
+    }
+  }
+}
