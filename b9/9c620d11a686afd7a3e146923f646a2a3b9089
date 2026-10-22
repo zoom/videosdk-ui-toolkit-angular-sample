@@ -1,0 +1,21 @@
+package-lock.json
+  s_ad4809008827ef::t_fb259e3f63e23e 3,9,19,3894-3896,3904-3906,3910
+package.json
+  s_ad4809008827ef::t_2500a8573f465b 3,26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "b99c620d11a686afd7a3e146923f646a2a3b9089",
+  "prompts": {},
+  "sessions": {
+    "s_ad4809008827ef": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16585-757b-7173-9bab-6ff78dc88c31",
+        "model": "gpt-6-sol"
+      },
+      "human_author": null
+    }
+  }
+}
